@@ -1,190 +1,180 @@
-/* General Styling */
+/* General styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #101B36;
-    color: white;
+    background-color: #f4f7fc;
+    color: #222;
 }
 
-/* Navigation */
-nav {
+/* Navigation bar */
+.navbar {
+    background-color: #101b3f;
+    color: white;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 8%;
-    background-color: #172554;
 }
 
 .logo {
-    color: #A5B4FC;
-    font-size: 26px;
+    color: #55c2ff;
+    font-size: 28px;
 }
 
-.nav-links a {
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
-    font-size: 15px;
+    font-size: 16px;
 }
 
-.nav-links a:hover {
-    color: #A5B4FC;
+.navbar a:hover {
+    color: #55c2ff;
 }
 
-/* Home Section */
+/* Home section */
 .home {
-    min-height: 90vh;
+    min-height: 85vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 40px 20px;
+    background: linear-gradient(135deg, #101b3f, #254b83);
+    color: white;
 }
 
-.welcome {
-    color: #A5B4FC;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
+.home-content {
+    max-width: 650px;
 }
 
 .home h1 {
-    font-size: 55px;
+    font-size: 48px;
     margin-bottom: 15px;
 }
 
-.home h1 span,
-.section h2 span {
-    color: #818CF8;
+.home h1 span {
+    color: #55c2ff;
 }
 
 .home h2 {
-    color: #A5B4FC;
-    font-size: 28px;
+    font-size: 25px;
     margin-bottom: 20px;
 }
 
-.description {
-    max-width: 600px;
-    line-height: 1.8;
-    color: #CBD5E1;
+.home p {
+    font-size: 17px;
+    line-height: 1.7;
     margin-bottom: 30px;
 }
 
 /* Buttons */
 .btn {
     display: inline-block;
-    background-color: #6366F1;
-    color: white;
-    padding: 14px 28px;
+    background-color: #55c2ff;
+    color: #101b3f;
+    padding: 12px 25px;
+    border-radius: 6px;
     text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
 .btn:hover {
-    background-color: #4338CA;
-    transform: translateY(-3px);
+    background-color: white;
 }
 
-/* Common Sections */
+/* Common sections */
 .section {
-    padding: 80px 10%;
+    padding: 70px 10%;
     text-align: center;
 }
 
 .section h2 {
-    font-size: 35px;
+    color: #101b3f;
+    font-size: 32px;
     margin-bottom: 25px;
 }
 
-.section > p {
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.8;
-    color: #CBD5E1;
+.section p {
+    font-size: 17px;
+    line-height: 1.7;
 }
 
-/* Skills and Project Cards */
-.cards {
+/* Skills */
+.skills-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 25px;
-    margin-top: 35px;
+    gap: 20px;
 }
 
-.card {
-    background-color: #1E293B;
-    padding: 30px;
-    border-radius: 12px;
-    width: 230px;
-    border: 1px solid #334155;
-    transition: 0.3s;
+.skill {
+    background-color: #101b3f;
+    color: white;
+    padding: 18px 35px;
+    border-radius: 8px;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    border-color: #818CF8;
+/* Projects */
+.project-card {
+    background-color: white;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.card h3 {
-    color: #A5B4FC;
-    margin-bottom: 15px;
-}
-
-.card p {
-    color: #CBD5E1;
-    line-height: 1.6;
-}
-
-/* Contact Section */
-#contact .btn {
-    margin-top: 25px;
+.project-card h3 {
+    color: #254b83;
+    margin-bottom: 12px;
 }
 
 /* Footer */
 footer {
-    background-color: #172554;
+    background-color: #101b3f;
+    color: white;
     text-align: center;
-    padding: 25px;
-    color: #CBD5E1;
+    padding: 20px;
 }
 
-/* Mobile Responsive Design */
-@media (max-width: 650px) {
+/* Mobile responsive design */
+@media (max-width: 600px) {
 
-    nav {
+    .navbar {
         flex-direction: column;
-        gap: 20px;
+        gap: 18px;
     }
 
-    .nav-links {
-        display: flex;
+    .navbar ul {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
 
-    .nav-links a {
-        margin: 0;
-    }
-
     .home h1 {
-        font-size: 38px;
+        font-size: 34px;
     }
 
     .home h2 {
-        font-size: 22px;
+        font-size: 21px;
     }
 
     .section {
-        padding: 60px 6%;
+        padding: 50px 7%;
     }
 }
